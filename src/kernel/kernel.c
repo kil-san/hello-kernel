@@ -147,6 +147,7 @@ void draw_logo(void)
 {
 	for (uint8_t height = 1; height <= VGA_HEIGHT - 4; height++)
 	{
+		terminal_color = vga_entry_color((height % 15) + 1, VGA_COLOR_BLACK);
 		for (uint8_t width = 0; width < (VGA_WIDTH / 2) + height; width++)
 		{
 			if (width < (VGA_WIDTH / 2) - height)
